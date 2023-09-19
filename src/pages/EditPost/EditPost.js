@@ -42,34 +42,34 @@ const EditPost = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+    
         setFormError("");
-
+    
         // Validar a URL da imagem
         try {
             new URL(image);
         } catch (error) {
             setFormError("A imagem precisa ser uma URL.");
         }
-
+    
         // Converter a primeira letra da marca do carro para minúscula
         const convertFirstLetterToLower = (string) => {
             return string.charAt(0).toLowerCase() + string.slice(1);
         };
-
+    
         // Converter a primeira letra da marca do carro para minúscula
         const convertedTags = convertFirstLetterToLower(tags);
-
+    
         // Criar o array de tags com a primeira letra maiúscula
         const tagsArray = convertedTags.split(",").map((tag) => tag.trim());
-
+    
         // Checar todos os valores
         if (!title || !image || !tags || !body || !price) {
             setFormError("Por favor, preencha todos os campos!");
         }
-
+    
         if (formError) return;
-
+    
         const data = {
             title,
             image,
@@ -79,9 +79,9 @@ const EditPost = () => {
             uid: user.uid,
             createdBy: user.displayName,
         };
-
+    
         updateDocument(id, data);
-
+    
         // Redirect para a página do dashboard
         navigate("/dashboard");
     };
