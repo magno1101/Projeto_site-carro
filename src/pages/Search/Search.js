@@ -20,9 +20,12 @@ const Search = () => {
                         <Link to="/" className="btn btn-dark">Voltar</Link>
                     </div>
                 )}
-                {posts && posts.map((post) => (
-                    <PostDetail key={post.id} post={post} />
-                ))}
+                <div className={styles.container_cars}>
+                    {posts && posts.map((post) => (
+                        <PostDetail key={post.id} post={post} />
+                    ))}
+                </div>
+
             </div>
         </div>
     )
