@@ -64,7 +64,7 @@
 
 .box_visible a:hover {
     border: 1px solid rgb(0, 132, 255);
-    color: rgb(0, 132, 255);
+    color: white;
     background-color: transparent;
     transition: 1.5s;
 }
