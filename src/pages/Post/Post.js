@@ -44,12 +44,12 @@ const Post = () => {
 
               </div>
             }
+            <div className={styles.post_spec}>
+              <h2>Especificações:</h2>
+              <p>{post.body}</p>
+            </div>
+          </div>
 
-          </div>
-          <div className={styles.post_spec}>
-            <h2>Especificações:</h2>
-            <p>{post.body}</p>
-          </div>
         </>
       )}
     </div>
