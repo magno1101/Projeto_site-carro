@@ -1,0 +1,26 @@
+.footer{
+    padding-bottom: 30px;
+    background-color: red;
+    text-align: center;
+    color: white;
+}
+
+.container_footer {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.container_footer div {
+    width: 250px;
+    margin-bottom:30px ;
+}
+.container_footer svg {
+    color: white;
+    font-size:  2em;
+}
+
+
